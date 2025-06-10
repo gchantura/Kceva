@@ -80,9 +80,13 @@
       <!-- Mobile menu button -->
       <div class="md:hidden">
         <button
+          type="button"
           on:click={toggleMobileMenu}
-          class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+          aria-controls="mobile-menu"
+          aria-expanded={isMobileMenuOpen}
         >
+          <span class="sr-only">Open main menu</span>
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {#if isMobileMenuOpen}
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
