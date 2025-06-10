@@ -222,3 +222,30 @@ export function searchProducts(query) {
     product.features.some(feature => feature.toLowerCase().includes(lowercaseQuery))
   );
 }
+
+// SEO Schema generation
+export function generateProductSchema(product) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description,
+    image: product.image,
+    brand: {
+      '@type': 'Brand',
+      name: product.brand
+    },
+    offers: {
+      '@type': 'Offer',
+      price: product.price,
+      priceCurrency: 'USD',
+      availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      url: product.affiliateUrl
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: product.rating,
+      reviewCount: product.reviewCount
+    }
+  };
+}
