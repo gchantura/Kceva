@@ -84,6 +84,7 @@
           <button
             on:click={handleSearch}
             class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-blue-600"
+            aria-label="Search"
           >
             <svg
               class="h-5 w-5"

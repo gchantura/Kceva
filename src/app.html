@@ -1,47 +1,49 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<!-- Essential SEO Meta Tags -->
-		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-		<meta name="googlebot" content="index, follow" />
-		<meta name="bingbot" content="index, follow" />
-		
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="KCEVA - Premium Affiliate Store" />
-		
-		<!-- Twitter Card Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:creator" content="@kceva" />
-		<meta name="twitter:site" content="@kceva" />
-		
-		<!-- Canonical URL -->
-		<link rel="canonical" href="%sveltekit.url%" />
-		
-		<!-- Preconnect to external domains for performance -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		
-		<!-- DNS Prefetch for affiliate networks -->
-		<link rel="dns-prefetch" href="//amazon.com" />
-		<link rel="dns-prefetch" href="//affiliate-networks.com" />
-		
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div>%sveltekit.body%</div>
-		
-		<!-- JSON-LD Structured Data -->
-		<script type="application/ld+json">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Essential SEO Meta Tags -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="googlebot" content="index, follow" />
+	<meta name="bingbot" content="index, follow" />
+
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Kceva - Premium Affiliate Store" />
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@kceva" />
+	<meta name="twitter:site" content="@kceva" />
+
+	<!-- Canonical URL -->
+	<link rel="canonical" href="%sveltekit.url%" />
+
+	<!-- Preconnect to external domains for performance -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+	<!-- DNS Prefetch for affiliate networks -->
+	<link rel="dns-prefetch" href="//amazon.com" />
+	<link rel="dns-prefetch" href="//affiliate-networks.com" />
+
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div>%sveltekit.body%</div>
+
+	<!-- JSON-LD Structured Data -->
+	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "WebSite",
-			"name": "KCEVA",
+			"name": "Kceva",
 			"description": "Premium affiliate store featuring curated products and deals",
 			"url": "https://kceva.com",
 			"potentialAction": {
@@ -51,5 +53,6 @@
 			}
 		}
 		</script>
-	</body>
+</body>
+
 </html>

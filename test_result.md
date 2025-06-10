@@ -1,5 +1,5 @@
 
-# Test Results for KCEVA Affiliate eCommerce Website
+# Test Results for Kceva Affiliate eCommerce Website
 
 ## Frontend Components
 
@@ -111,8 +111,8 @@ test_plan:
 
 agent_communication:
   - agent: "testing"
-    message: "Created initial test_result.md file to track testing progress for the KCEVA affiliate eCommerce website."
+    message: "Created initial test_result.md file to track testing progress for the Kceva affiliate eCommerce website."
   - agent: "testing"
-    message: "Completed testing of the KCEVA affiliate eCommerce website. Most functionality works correctly, but there's an issue with the mobile hamburger menu not being clickable on mobile view. Also, the search functionality redirects to a 404 page when searching for products."
+    message: "Completed testing of the Kceva affiliate eCommerce website. Most functionality works correctly, but there's an issue with the mobile hamburger menu not being clickable on mobile view. Also, the search functionality redirects to a 404 page when searching for products."
   - agent: "testing"
     message: "Verified the fixes for the mobile hamburger menu and search functionality. Both features are now implemented correctly. The mobile menu button has the correct attributes and structure. The search page is properly implemented with sorting, filtering, and popular search suggestions."
