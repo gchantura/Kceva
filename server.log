@@ -1,0 +1,10 @@
+
+> kceva@0.0.1 dev
+> vite dev
+
+10:36:25 AM [vite] (client) Forced re-optimization of dependencies
+
+  VITE v6.3.5  ready in 3178 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
