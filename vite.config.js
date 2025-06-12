@@ -8,9 +8,24 @@ export default defineConfig({
 		rollupOptions: {
 			output: {
 				manualChunks: {
-					vendor: ['svelte']
+					vendor: ['svelte'],
+					components: ['src/lib/components']
 				}
 			}
+		},
+		cssCodeSplit: true,
+		minify: 'terser',
+		terserOptions: {
+			compress: {
+				drop_console: true,
+				drop_debugger: true
+			}
 		}
+	},
+	optimizeDeps: {
+		include: ['svelte']
+	},
+	server: {
+		preTransformRequests: false
 	}
 });

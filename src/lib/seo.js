@@ -2,8 +2,8 @@
 export const siteConfig = {
 	name: 'KCEVA',
 	description: 'Premium affiliate store featuring curated products, exclusive deals, and honest reviews to help you make informed purchasing decisions.',
-	url: 'https://kceva.com',
-	ogImage: 'https://kceva.com/og-image.jpg',
+	url: 'https://www.kceva.com',
+	ogImage: 'https://www.kceva.com/og-image.jpg',
 	twitterHandle: '@kceva',
 	keywords: [
 		'affiliate store',
@@ -50,23 +50,29 @@ export function generateProductSchema(product) {
 		'@type': 'Product',
 		name: product.name,
 		description: product.description,
-		image: product.images,
+		image: [product.image],
 		brand: {
 			'@type': 'Brand',
 			name: product.brand
 		},
 		offers: {
 			'@type': 'Offer',
-			price: product.price,
+			price: product.price.toString(),
 			priceCurrency: 'USD',
-			availability: 'https://schema.org/InStock',
-			url: product.affiliateUrl
+			availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+			url: product.affiliateUrl,
+			priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
 		},
-		aggregateRating: product.rating ? {
+		aggregateRating: {
 			'@type': 'AggregateRating',
-			ratingValue: product.rating.value,
-			reviewCount: product.rating.count
-		} : undefined
+			ratingValue: product.rating.toString(),
+			reviewCount: product.reviewCount.toString(),
+			bestRating: '5',
+			worstRating: '1'
+		},
+		sku: `KCEVA-${product.id}`,
+		mpn: `${product.brand}-${product.id}`,
+		category: product.category
 	};
 }
 
@@ -80,5 +86,26 @@ export function generateBreadcrumbSchema(breadcrumbs) {
 			name: crumb.name,
 			item: crumb.url
 		}))
+	};
+}
+
+export function generateOrganizationSchema() {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: siteConfig.name,
+		description: siteConfig.description,
+		url: siteConfig.url,
+		logo: `${siteConfig.url}/logo.png`,
+		contactPoint: {
+			'@type': 'ContactPoint',
+			contactType: 'customer service',
+			availableLanguage: 'English'
+		},
+		sameAs: [
+			'https://twitter.com/kceva',
+			'https://facebook.com/kceva',
+			'https://instagram.com/kceva'
+		]
 	};
 }

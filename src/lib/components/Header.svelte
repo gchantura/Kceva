@@ -19,14 +19,14 @@
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center">
+        <a href="/" class="flex items-center" aria-label="Kceva Home">
           <div class="text-2xl font-bold text-blue-600">Kceva</div>
           <div class="text-xs text-gray-900 ml-1 pr-5">Affiliate Store</div>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8">
+      <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
         <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors"
           >Home</a
         >
@@ -57,15 +57,19 @@
       <!-- Search Bar -->
       <div class="hidden md:flex flex-1 max-w-lg mx-8">
         <div class="relative w-full">
+          <label for="search-input" class="sr-only">Search products</label>
           <input
+            id="search-input"
             type="text"
             bind:value={searchQuery}
             on:keydown={(e) => e.key === "Enter" && handleSearch()}
             placeholder="Search products..."
             class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            autocomplete="off"
           />
           <div
             class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            aria-hidden="true"
           >
             <svg
               class="h-5 w-5 text-gray-400"
@@ -84,7 +88,7 @@
           <button
             on:click={handleSearch}
             class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-blue-600"
-            aria-label="Search"
+            aria-label="Search products"
           >
             <svg
               class="h-5 w-5"
@@ -107,6 +111,7 @@
       <div class="hidden md:flex items-center space-x-4">
         <button
           class="text-gray-700 hover:text-blue-600 transition-colors relative"
+          aria-label="View wishlist (0 items)"
         >
           <svg
             class="h-6 w-6"
@@ -123,11 +128,13 @@
           </svg>
           <span
             class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+            aria-hidden="true"
             >0</span
           >
         </button>
         <button
           class="text-gray-700 hover:text-blue-600 transition-colors relative"
+          aria-label="View cart (0 items)"
         >
           <svg
             class="h-6 w-6"
@@ -144,6 +151,7 @@
           </svg>
           <span
             class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+            aria-hidden="true"
             >0</span
           >
         </button>
@@ -157,6 +165,7 @@
           class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
           aria-controls="mobile-menu"
           aria-expanded={isMobileMenuOpen}
+          aria-label="Toggle main menu"
         >
           <span class="sr-only">Open main menu</span>
           <svg
@@ -187,16 +196,19 @@
 
     <!-- Mobile menu -->
     {#if isMobileMenuOpen}
-      <div class="md:hidden">
+      <div class="md:hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
           <!-- Mobile search -->
           <div class="mb-4">
+            <label for="mobile-search-input" class="sr-only">Search products</label>
             <input
+              id="mobile-search-input"
               type="text"
               bind:value={searchQuery}
               on:keydown={(e) => e.key === "Enter" && handleSearch()}
               placeholder="Search products..."
               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              autocomplete="off"
             />
           </div>
 
@@ -234,6 +246,7 @@
           <div class="flex items-center space-x-4 px-3 py-2">
             <button
               class="text-gray-700 hover:text-blue-600 transition-colors relative"
+              aria-label="View wishlist (0 items)"
             >
               <svg
                 class="h-6 w-6"
@@ -250,11 +263,13 @@
               </svg>
               <span
                 class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                aria-hidden="true"
                 >0</span
               >
             </button>
             <button
               class="text-gray-700 hover:text-blue-600 transition-colors relative"
+              aria-label="View cart (0 items)"
             >
               <svg
                 class="h-6 w-6"
@@ -271,6 +286,7 @@
               </svg>
               <span
                 class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                aria-hidden="true"
                 >0</span
               >
             </button>

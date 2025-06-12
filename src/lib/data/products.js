@@ -4,28 +4,28 @@ export const categories = [
     id: 'electronics',
     name: 'Electronics',
     description: 'Latest tech gadgets and electronics',
-    image: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece',
+    image: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80',
     slug: 'electronics'
   },
   {
     id: 'fashion',
     name: 'Fashion',
     description: 'Trendy clothing and accessories',
-    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80',
     slug: 'fashion'
   },
   {
     id: 'home',
     name: 'Home & Garden',
     description: 'Home decor and organization',
-    image: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14',
+    image: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14?auto=format&fit=crop&w=800&q=80',
     slug: 'home-garden'
   },
   {
     id: 'sports',
     name: 'Sports & Outdoors',
     description: 'Sports equipment and outdoor gear',
-    image: 'https://images.unsplash.com/photo-1673305414273-307a1fe7e959',
+    image: 'https://images.unsplash.com/photo-1673305414273-307a1fe7e959?auto=format&fit=crop&w=800&q=80',
     slug: 'sports-outdoors'
   }
 ];
@@ -40,7 +40,7 @@ export const featuredProducts = [
     discount: 20,
     rating: 4.8,
     reviewCount: 1256,
-    image: 'https://images.unsplash.com/photo-1641961924002-913bd679ee1e',
+    image: 'https://images.unsplash.com/photo-1641961924002-913bd679ee1e?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-1',
     category: 'electronics',
     features: ['Active Noise Cancellation', '30-hour Battery', 'Wireless', 'Quick Charge'],
@@ -56,7 +56,7 @@ export const featuredProducts = [
     discount: 25,
     rating: 4.6,
     reviewCount: 892,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-2',
     category: 'electronics',
     features: ['Heart Rate Monitor', 'GPS Tracking', 'Water Resistant', '7-day Battery'],
@@ -72,7 +72,7 @@ export const featuredProducts = [
     discount: 25,
     rating: 4.7,
     reviewCount: 2143,
-    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-3',
     category: 'fashion',
     features: ['Breathable Mesh', 'Cushioned Sole', 'Lightweight', 'Durable'],
@@ -88,7 +88,7 @@ export const featuredProducts = [
     discount: 38,
     rating: 4.5,
     reviewCount: 567,
-    image: 'https://images.pexels.com/photos/10557498/pexels-photo-10557498.jpeg',
+    image: 'https://images.pexels.com/photos/10557498/pexels-photo-10557498.jpeg?auto=compress&cs=tinysrgb&w=800',
     affiliateUrl: 'https://amazon.com/affiliate-link-4',
     category: 'home',
     features: ['Stackable Design', 'Clear Labels', 'Durable Plastic', 'Multiple Sizes'],
@@ -104,7 +104,7 @@ export const featuredProducts = [
     discount: 22,
     rating: 4.4,
     reviewCount: 324,
-    image: 'https://images.unsplash.com/photo-1697448524500-717d056bc8ad',
+    image: 'https://images.unsplash.com/photo-1697448524500-717d056bc8ad?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-5',
     category: 'sports',
     features: ['Complete Set', 'Graphite Shafts', 'Lightweight Bag', 'Professional Grade'],
@@ -120,7 +120,7 @@ export const featuredProducts = [
     discount: 35,
     rating: 4.9,
     reviewCount: 456,
-    image: 'https://images.unsplash.com/photo-1511556820780-d912e42b4980',
+    image: 'https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-6',
     category: 'fashion',
     features: ['Genuine Leather', 'Multiple Compartments', 'Adjustable Strap', 'Elegant Design'],
@@ -141,7 +141,7 @@ export const allProducts = [
     discount: 25,
     rating: 4.3,
     reviewCount: 234,
-    image: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece',
+    image: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-7',
     category: 'electronics',
     features: ['Fast Charging', 'Multi-Device', 'LED Indicators', 'Compact Design'],
@@ -158,7 +158,7 @@ export const allProducts = [
     discount: 38,
     rating: 4.6,
     reviewCount: 189,
-    image: 'https://images.unsplash.com/photo-1511556820780-d912e42b4980',
+    image: 'https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-8',
     category: 'fashion',
     features: ['UV Protection', 'Polarized Lenses', 'Lightweight Frame', 'Designer Style'],
@@ -175,7 +175,7 @@ export const allProducts = [
     discount: 30,
     rating: 4.4,
     reviewCount: 378,
-    image: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14',
+    image: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-9',
     category: 'home',
     features: ['Bamboo Material', 'Multiple Compartments', 'Cable Management', 'Eco-Friendly'],
@@ -192,7 +192,7 @@ export const allProducts = [
     discount: 33,
     rating: 4.7,
     reviewCount: 892,
-    image: 'https://images.unsplash.com/photo-1673305414273-307a1fe7e959',
+    image: 'https://images.unsplash.com/photo-1673305414273-307a1fe7e959?auto=format&fit=crop&w=800&q=80',
     affiliateUrl: 'https://amazon.com/affiliate-link-10',
     category: 'sports',
     features: ['Non-Slip Surface', 'Alignment Lines', 'Eco-Friendly', 'Extra Thick'],
@@ -223,29 +223,35 @@ export function searchProducts(query) {
   );
 }
 
-// SEO Schema generation
+// Enhanced SEO Schema generation
 export function generateProductSchema(product) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
     description: product.description,
-    image: product.image,
+    image: [product.image],
     brand: {
       '@type': 'Brand',
       name: product.brand
     },
     offers: {
       '@type': 'Offer',
-      price: product.price,
+      price: product.price.toString(),
       priceCurrency: 'USD',
       availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-      url: product.affiliateUrl
+      url: product.affiliateUrl,
+      priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: product.rating,
-      reviewCount: product.reviewCount
-    }
+      ratingValue: product.rating.toString(),
+      reviewCount: product.reviewCount.toString(),
+      bestRating: '5',
+      worstRating: '1'
+    },
+    sku: `KCEVA-${product.id}`,
+    mpn: `${product.brand}-${product.id}`,
+    category: product.category
   };
 }

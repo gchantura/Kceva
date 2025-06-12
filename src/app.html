@@ -21,16 +21,14 @@
 	<meta name="twitter:creator" content="@kceva" />
 	<meta name="twitter:site" content="@kceva" />
 
-	<!-- Canonical URL -->
-	<link rel="canonical" href="%sveltekit.url%" />
+	<!-- Preload critical resources -->
+	<link rel="preload" as="style" href="%sveltekit.assets%/app.css" />
+	<link rel="preload" as="image" href="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080" />
 
-	<!-- Preconnect to external domains for performance -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-	<!-- DNS Prefetch for affiliate networks -->
+	<!-- DNS Prefetch for external domains -->
+	<link rel="dns-prefetch" href="//images.unsplash.com" />
+	<link rel="dns-prefetch" href="//images.pexels.com" />
 	<link rel="dns-prefetch" href="//amazon.com" />
-	<link rel="dns-prefetch" href="//affiliate-networks.com" />
 
 	%sveltekit.head%
 </head>
@@ -45,14 +43,14 @@
 			"@type": "WebSite",
 			"name": "Kceva",
 			"description": "Premium affiliate store featuring curated products and deals",
-			"url": "https://kceva.com",
+			"url": "https://www.kceva.com",
 			"potentialAction": {
 				"@type": "SearchAction",
-				"target": "https://kceva.com/search?q={search_term_string}",
+				"target": "https://www.kceva.com/search?q={search_term_string}",
 				"query-input": "required name=search_term_string"
 			}
 		}
-		</script>
+	</script>
 </body>
 
 </html>

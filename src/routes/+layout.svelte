@@ -5,7 +5,7 @@
         
         export let data;
         
-        // Default meta tags
+        // Default meta tags with proper canonical URL
         $: metaTags = {
                 title: siteConfig.name,
                 description: siteConfig.description,
@@ -36,8 +36,12 @@
         <meta name="twitter:description" content={metaTags['twitter:description']} />
         <meta name="twitter:image" content={metaTags['twitter:image']} />
         
-        <!-- Canonical -->
+        <!-- Canonical URL - Fixed -->
         <link rel="canonical" href={metaTags.canonical} />
+        
+        <!-- Performance optimizations -->
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://images.pexels.com" />
 </svelte:head>
 
 <slot></slot>

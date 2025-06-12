@@ -4,6 +4,7 @@
         import Footer from '$lib/components/Footer.svelte';
         import ProductCard from '$lib/components/ProductCard.svelte';
         import CategoryCard from '$lib/components/CategoryCard.svelte';
+        import OptimizedImage from '$lib/components/OptimizedImage.svelte';
         import { siteConfig } from '$lib/seo.js';
         import { categories, getFeaturedProducts } from '$lib/data/products.js';
         
@@ -35,12 +36,16 @@
 
 <main>
         <!-- Hero Section -->
-        <section class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <section class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white hero-section">
                 <div class="absolute inset-0">
-                        <img 
-                                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg" 
-                                alt="Modern eCommerce Shopping" 
-                                class="w-full h-full object-cover opacity-20"
+                        <OptimizedImage
+                                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080"
+                                alt="Modern eCommerce Shopping Experience"
+                                width="1920"
+                                height="1080"
+                                className="w-full h-full object-cover opacity-20"
+                                priority={true}
+                                sizes="100vw"
                         />
                 </div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -115,7 +120,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 <div class="text-center">
                                         <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                                 </svg>
                                         </div>
@@ -124,7 +129,7 @@
                                 </div>
                                 <div class="text-center">
                                         <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                                                 </svg>
                                         </div>
@@ -133,7 +138,7 @@
                                 </div>
                                 <div class="text-center">
                                         <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                                 </svg>
                                         </div>
@@ -153,11 +158,14 @@
                                         Get exclusive deals, product recommendations, and early access to sales delivered to your inbox.
                                 </p>
                                 <form class="flex flex-col sm:flex-row gap-4">
+                                        <label for="newsletter-email" class="sr-only">Email address</label>
                                         <input 
+                                                id="newsletter-email"
                                                 type="email" 
                                                 placeholder="Enter your email address"
                                                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                                 required
+                                                autocomplete="email"
                                         />
                                         <button 
                                                 type="submit"
