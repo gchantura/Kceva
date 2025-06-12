@@ -26,7 +26,7 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
+      <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
         <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors"
           >Home</a
         >
@@ -128,8 +128,7 @@
           </svg>
           <span
             class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-            aria-hidden="true"
-            >0</span
+            aria-hidden="true">0</span
           >
         </button>
         <button
@@ -151,8 +150,7 @@
           </svg>
           <span
             class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-            aria-hidden="true"
-            >0</span
+            aria-hidden="true">0</span
           >
         </button>
       </div>
@@ -200,7 +198,9 @@
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
           <!-- Mobile search -->
           <div class="mb-4">
-            <label for="mobile-search-input" class="sr-only">Search products</label>
+            <label for="mobile-search-input" class="sr-only"
+              >Search products</label
+            >
             <input
               id="mobile-search-input"
               type="text"
@@ -263,8 +263,7 @@
               </svg>
               <span
                 class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-                aria-hidden="true"
-                >0</span
+                aria-hidden="true">0</span
               >
             </button>
             <button
@@ -286,8 +285,7 @@
               </svg>
               <span
                 class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-                aria-hidden="true"
-                >0</span
+                aria-hidden="true">0</span
               >
             </button>
           </div>

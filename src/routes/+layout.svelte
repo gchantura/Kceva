@@ -1,44 +1,47 @@
 <script>
-        import '../app.css';
-        import { page } from '$app/stores';
-        import { siteConfig } from '$lib/seo.js';
-        
-        export let data;
-        
+        import "../app.css";
+        import { page } from "$app/stores";
+        import { siteConfig } from "$lib/seo.js";
+
+        export const data = {};
+
         // Default meta tags with proper canonical URL
         $: metaTags = {
                 title: siteConfig.name,
                 description: siteConfig.description,
-                'og:title': siteConfig.name,
-                'og:description': siteConfig.description,
-                'og:image': siteConfig.ogImage,
-                'og:url': siteConfig.url,
-                'twitter:title': siteConfig.name,
-                'twitter:description': siteConfig.description,
-                'twitter:image': siteConfig.ogImage,
-                canonical: siteConfig.url + $page.url.pathname
+                "og:title": siteConfig.name,
+                "og:description": siteConfig.description,
+                "og:image": siteConfig.ogImage,
+                "og:url": siteConfig.url,
+                "twitter:title": siteConfig.name,
+                "twitter:description": siteConfig.description,
+                "twitter:image": siteConfig.ogImage,
+                canonical: siteConfig.url + $page.url.pathname,
         };
 </script>
 
 <svelte:head>
         <title>{metaTags.title}</title>
         <meta name="description" content={metaTags.description} />
-        <meta name="keywords" content={siteConfig.keywords.join(', ')} />
-        
+        <meta name="keywords" content={siteConfig.keywords.join(", ")} />
+
         <!-- Open Graph -->
-        <meta property="og:title" content={metaTags['og:title']} />
-        <meta property="og:description" content={metaTags['og:description']} />
-        <meta property="og:image" content={metaTags['og:image']} />
-        <meta property="og:url" content={metaTags['og:url']} />
-        
+        <meta property="og:title" content={metaTags["og:title"]} />
+        <meta property="og:description" content={metaTags["og:description"]} />
+        <meta property="og:image" content={metaTags["og:image"]} />
+        <meta property="og:url" content={metaTags["og:url"]} />
+
         <!-- Twitter -->
-        <meta name="twitter:title" content={metaTags['twitter:title']} />
-        <meta name="twitter:description" content={metaTags['twitter:description']} />
-        <meta name="twitter:image" content={metaTags['twitter:image']} />
-        
+        <meta name="twitter:title" content={metaTags["twitter:title"]} />
+        <meta
+                name="twitter:description"
+                content={metaTags["twitter:description"]}
+        />
+        <meta name="twitter:image" content={metaTags["twitter:image"]} />
+
         <!-- Canonical URL - Fixed -->
         <link rel="canonical" href={metaTags.canonical} />
-        
+
         <!-- Performance optimizations -->
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://images.pexels.com" />

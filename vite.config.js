@@ -3,13 +3,16 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()],
+	plugins: [
+		tailwindcss(),
+		sveltekit()
+	],
 	build: {
 		rollupOptions: {
 			output: {
 				manualChunks: {
-					vendor: ['svelte'],
-					components: ['src/lib/components']
+					// Only vendor dependencies (remove 'components' chunk)
+					vendor: ['svelte']
 				}
 			}
 		},
@@ -17,15 +20,14 @@ export default defineConfig({
 		minify: 'terser',
 		terserOptions: {
 			compress: {
-				drop_console: true,
-				drop_debugger: true
+				drop_console: true,  // Remove console.* in production
+				drop_debugger: true // Remove debugger statements
 			}
 		}
 	},
-	optimizeDeps: {
-		include: ['svelte']
-	},
+	// Removed optimizeDeps (SvelteKit handles this automatically)
 	server: {
-		preTransformRequests: false
+		// Enable pre-transform for faster HMR (optional)
+		preTransformRequests: true
 	}
 });

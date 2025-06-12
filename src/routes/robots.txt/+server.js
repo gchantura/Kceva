@@ -4,25 +4,18 @@ export async function GET() {
 	const robots = `User-agent: *
 Allow: /
 
-# Disallow admin and private areas
+# Block sensitive/private sections
 Disallow: /admin/
+Disallow: /edit/
 Disallow: /api/
-Disallow: /_app/
 Disallow: /checkout/
 Disallow: /account/
 
-# Allow important crawlers
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
+# Crawl delay to reduce server stress
+Crawl-delay: 1
 
 # Sitemap location
-Sitemap: ${siteConfig.url}/sitemap.xml
-
-# Crawl delay
-Crawl-delay: 1`;
+Sitemap: ${siteConfig.url}/sitemap.xml`;
 
 	return new Response(robots, {
 		headers: {
