@@ -33,18 +33,19 @@
 
         <!-- Twitter -->
         <meta name="twitter:title" content={metaTags["twitter:title"]} />
-        <meta
-                name="twitter:description"
-                content={metaTags["twitter:description"]}
-        />
+        <meta name="twitter:description" content={metaTags["twitter:description"]} />
         <meta name="twitter:image" content={metaTags["twitter:image"]} />
 
-        <!-- Canonical URL - Fixed -->
+        <!-- Canonical URL -->
         <link rel="canonical" href={metaTags.canonical} />
 
         <!-- Performance optimizations -->
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://images.pexels.com" />
+        
+        <!-- Resource hints for better performance -->
+        <link rel="dns-prefetch" href="//amazon.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 </svelte:head>
 
-<slot></slot>
+<slot />

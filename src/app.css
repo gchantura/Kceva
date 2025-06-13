@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-/* Optimize font loading */
+/* Optimize font loading with font-display: swap */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -20,13 +20,21 @@
   src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Inter SemiBold'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2') format('woff2');
+}
+
 /* Reduce layout shift */
 img {
   height: auto;
   max-width: 100%;
 }
 
-/* Optimize animations */
+/* Optimize animations with will-change */
 .transition-transform {
   will-change: transform;
 }
@@ -35,7 +43,7 @@ img {
   will-change: opacity;
 }
 
-/* Reduce paint complexity */
+/* Enhanced shadow definitions for better performance */
 .shadow-md {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -49,7 +57,7 @@ img {
   scroll-behavior: smooth;
 }
 
-/* Reduce CLS */
+/* Reduce CLS with aspect ratios */
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
@@ -58,7 +66,11 @@ img {
   aspect-ratio: 16 / 9;
 }
 
-/* Loading states */
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+/* Enhanced loading states */
 .loading-skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
@@ -79,9 +91,152 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Reduce reflows */
+/* Reduce reflows with containment */
 .container {
   contain: layout style paint;
+}
+
+/* Enhanced color contrast for accessibility */
+.text-green-600 {
+  color: #059669; /* Improved contrast ratio */
+}
+
+.text-green-700 {
+  color: #047857; /* Even better contrast for important text */
+}
+
+.bg-green-600 {
+  background-color: #059669;
+}
+
+.bg-green-700 {
+  background-color: #047857;
+}
+
+/* Price text with better contrast */
+.price-text {
+  color: #047857; /* WCAG AA compliant green */
+  font-weight: 600;
+}
+
+/* Optimize line clamping */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Reduce paint complexity for cards */
+.product-card {
+  contain: layout style paint;
+  transform: translateZ(0);
+}
+
+/* Optimize hover states */
+.hover-lift:hover {
+  transform: translateY(-2px) translateZ(0);
+  transition: transform 0.2s ease-out;
+}
+
+/* Critical above-the-fold styles */
+.hero-content {
+  contain: layout style;
+}
+
+/* Optimize grid layouts */
+.product-grid {
+  contain: layout;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Mobile-first responsive grid */
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Reduce DOM complexity with efficient selectors */
+.btn-primary {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+}
+
+/* Optimize form elements */
+.form-input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200;
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus indicators */
+.focus-visible:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -11,7 +11,6 @@ export default defineConfig({
 		rollupOptions: {
 			output: {
 				manualChunks: {
-					// Only vendor dependencies (remove 'components' chunk)
 					vendor: ['svelte']
 				}
 			}
@@ -20,14 +19,28 @@ export default defineConfig({
 		minify: 'terser',
 		terserOptions: {
 			compress: {
-				drop_console: true,  // Remove console.* in production
-				drop_debugger: true // Remove debugger statements
+				drop_console: true,
+				drop_debugger: true,
+				pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+			},
+			mangle: {
+				safari10: true
 			}
-		}
+		},
+		// Optimize chunk size
+		chunkSizeWarningLimit: 1000,
+		// Enable source maps for production debugging
+		sourcemap: false
 	},
-	// Removed optimizeDeps (SvelteKit handles this automatically)
 	server: {
-		// Enable pre-transform for faster HMR (optional)
 		preTransformRequests: true
+	},
+	// CSS optimization
+	css: {
+		devSourcemap: true
+	},
+	// Optimize dependencies
+	optimizeDeps: {
+		include: ['svelte/store', 'svelte/internal']
 	}
 });

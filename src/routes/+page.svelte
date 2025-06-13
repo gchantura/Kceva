@@ -35,20 +35,21 @@
 <Header />
 
 <main>
-        <!-- Hero Section -->
+        <!-- Hero Section with optimized LCP image -->
         <section class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white hero-section">
                 <div class="absolute inset-0">
                         <OptimizedImage
-                                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080"
+                                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg"
                                 alt="Modern eCommerce Shopping Experience"
                                 width="1920"
                                 height="1080"
                                 className="w-full h-full object-cover opacity-20"
                                 priority={true}
                                 sizes="100vw"
+                                aspectRatio="16/9"
                         />
                 </div>
-                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 hero-content">
                         <div class="text-center">
                                 <h1 class="text-4xl md:text-6xl font-bold mb-6">
                                         Discover Premium Products
@@ -58,10 +59,10 @@
                                         Hand-picked products, exclusive deals, and honest reviews. Your trusted source for smart shopping decisions.
                                 </p>
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                        <a href="#featured" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                        <a href="#featured" class="btn-primary">
                                                 Shop Featured Products
                                         </a>
-                                        <a href="#categories" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                                        <a href="#categories" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200">
                                                 Browse Categories
                                         </a>
                                 </div>
@@ -95,13 +96,13 @@
                                         Top-rated products with exclusive deals. Limited time offers you don't want to miss.
                                 </p>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="product-grid">
                                 {#each featuredProducts as product}
                                         <ProductCard {product} />
                                 {/each}
                         </div>
                         <div class="text-center mt-12">
-                                <a href="/products" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                <a href="/products" class="btn-primary">
                                         View All Products
                                 </a>
                         </div>
@@ -119,7 +120,7 @@
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 <div class="text-center">
-                                        <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 gpu-accelerated">
                                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                                 </svg>
@@ -128,7 +129,7 @@
                                         <p class="text-gray-300">Honest, unbiased reviews from real users to help you make informed decisions.</p>
                                 </div>
                                 <div class="text-center">
-                                        <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 gpu-accelerated">
                                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                                                 </svg>
@@ -137,7 +138,7 @@
                                         <p class="text-gray-300">We track prices across multiple retailers to ensure you get the best deals.</p>
                                 </div>
                                 <div class="text-center">
-                                        <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 gpu-accelerated">
                                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                                 </svg>
@@ -157,19 +158,20 @@
                                 <p class="text-lg text-gray-600 mb-8">
                                         Get exclusive deals, product recommendations, and early access to sales delivered to your inbox.
                                 </p>
-                                <form class="flex flex-col sm:flex-row gap-4">
+                                <form class="flex flex-col sm:flex-row gap-4" action="/newsletter" method="POST">
                                         <label for="newsletter-email" class="sr-only">Email address</label>
                                         <input 
                                                 id="newsletter-email"
+                                                name="email"
                                                 type="email" 
                                                 placeholder="Enter your email address"
-                                                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                class="form-input flex-1"
                                                 required
                                                 autocomplete="email"
                                         />
                                         <button 
                                                 type="submit"
-                                                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                                                class="btn-primary"
                                         >
                                                 Subscribe
                                         </button>
