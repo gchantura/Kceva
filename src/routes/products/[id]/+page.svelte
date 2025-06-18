@@ -30,16 +30,6 @@
   $: productSchema = product ? generateProductSchema(product) : null;
   $: breadcrumbSchema =
     breadcrumbs.length > 0 ? generateBreadcrumbSchema(breadcrumbs) : null;
-
-  function addToWishlist() {
-    // Wishlist functionality - would integrate with store
-    alert("Added to wishlist!");
-  }
-
-  function addToCart() {
-    // Cart functionality - would integrate with store
-    alert("Added to cart!");
-  }
 </script>
 
 {#if product}
@@ -174,9 +164,6 @@
                 </span>
               {/if}
             </div>
-            <p class="mt-1 text-sm text-gray-600">
-              Free shipping on orders over $50
-            </p>
           </div>
 
           <!-- Description -->
@@ -220,33 +207,6 @@
             >
               Buy Now - ${product.price.toFixed(2)}
             </a>
-            <div class="flex space-x-4">
-              <button
-                on:click={addToCart}
-                class="flex-1 bg-gray-100 border border-gray-300 rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors"
-              >
-                Add to Cart
-              </button>
-              <button
-                on:click={addToWishlist}
-                class="flex-1 bg-gray-100 border border-gray-300 rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors"
-              >
-                <svg
-                  class="h-5 w-5 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-                Wishlist
-              </button>
-            </div>
           </div>
 
           <!-- Stock Status -->

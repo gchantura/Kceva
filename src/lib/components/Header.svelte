@@ -48,10 +48,6 @@
           href="/category/sports-outdoors"
           class="text-gray-700 hover:text-blue-600 transition-colors">Sports</a
         >
-        <a
-          href="/blog"
-          class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a
-        >
       </nav>
 
       <!-- Search Bar -->
@@ -105,54 +101,6 @@
             </svg>
           </button>
         </div>
-      </div>
-
-      <!-- Right side buttons -->
-      <div class="hidden md:flex items-center space-x-4">
-        <button
-          class="text-gray-700 hover:text-blue-600 transition-colors relative"
-          aria-label="View wishlist (0 items)"
-        >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg>
-          <span
-            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-            aria-hidden="true">0</span
-          >
-        </button>
-        <button
-          class="text-gray-700 hover:text-blue-600 transition-colors relative"
-          aria-label="View cart (0 items)"
-        >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4m-.4-2l-1-5H3m4 13a1 1 0 102 0 1 1 0 00-2 0zm10 0a1 1 0 102 0 1 1 0 00-2 0z"
-            />
-          </svg>
-          <span
-            class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-            aria-hidden="true">0</span
-          >
-        </button>
       </div>
 
       <!-- Mobile menu button -->
@@ -237,58 +185,6 @@
             class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
             >Sports</a
           >
-          <a
-            href="/blog"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Blog</a
-          >
-
-          <div class="flex items-center space-x-4 px-3 py-2">
-            <button
-              class="text-gray-700 hover:text-blue-600 transition-colors relative"
-              aria-label="View wishlist (0 items)"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-              <span
-                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-                aria-hidden="true">0</span
-              >
-            </button>
-            <button
-              class="text-gray-700 hover:text-blue-600 transition-colors relative"
-              aria-label="View cart (0 items)"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4m-.4-2l-1-5H3m4 13a1 1 0 102 0 1 1 0 00-2 0zm10 0a1 1 0 102 0 1 1 0 00-2 0z"
-                />
-              </svg>
-              <span
-                class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-                aria-hidden="true">0</span
-              >
-            </button>
-          </div>
         </div>
       </div>
     {/if}

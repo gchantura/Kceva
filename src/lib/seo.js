@@ -1,22 +1,29 @@
-// Enhanced SEO utilities and constants
 export const siteConfig = {
-	name: 'KC Eva',
-	description: 'Discover premium lifestyle and chess gear hand-picked for families, kids, and enthusiasts. Curated collections, exclusive deals, and fun educational finds.',
+	name: 'Kceva',
+	tagline: 'Top Amazon Picks for Smart Living & Family Essentials',
+	description:
+		'Discover the best Amazon deals on smart lifestyle gear, home essentials, tech, wellness, educational toys, and more. Curated daily for families, individuals, and smart shoppers.',
 	url: 'https://www.kceva.com',
 	ogImage: 'https://www.kceva.com/images/og-cover.jpg',
 	twitterHandle: '@kceva',
 	keywords: [
-		'premium lifestyle gear',
-		'chess equipment',
-		'family products',
+		'amazon affiliate store',
+		'best amazon finds',
+		'lifestyle products',
+		'home and kitchen deals',
+		'tech gadgets',
+		'wellness essentials',
 		'educational toys',
-		'curated collections',
-		'exclusive deals',
-		'kids chess sets',
-		'lifestyle accessories'
+		'family shopping',
+		'curated amazon products',
+		'gift ideas',
+		'travel accessories',
+		'eco-friendly products',
+		'personal care',
+		'home organization',
+		'smart home gear'
 	]
 };
-
 export function generateMetaTags({
 	title,
 	description = siteConfig.description,
@@ -27,7 +34,7 @@ export function generateMetaTags({
 	noindex = false
 }) {
 	const fullTitle = title ? `${title} | ${siteConfig.name}` : `${siteConfig.name} – Premium Lifestyle & Chess Gear`;
-	
+
 	return {
 		title: fullTitle,
 		description,

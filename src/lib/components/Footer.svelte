@@ -65,12 +65,7 @@
               >About Us</a
             >
           </li>
-          <li>
-            <a
-              href="/blog"
-              class="text-gray-400 hover:text-white transition-colors">Blog</a
-            >
-          </li>
+
           <li>
             <a
               href="/contact"
@@ -127,7 +122,7 @@
     <div class="border-t border-gray-700 mt-8 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="text-gray-400 text-sm mb-4 md:mb-0">
-          <p>&copy; 2024 Kceva. All rights reserved.</p>
+          <p>&copy; 2025 Kceva. All rights reserved.</p>
         </div>
         <div class="flex space-x-6 text-sm">
           <a
