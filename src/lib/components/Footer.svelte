@@ -1,4 +1,4 @@
-<div class="bg-gray-900 text-white">
+<div class="bg-gray-900 text-white opacity-100 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Company Info -->
