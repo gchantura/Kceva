@@ -104,7 +104,7 @@ export function generateOrganizationSchema() {
 		name: siteConfig.name,
 		description: siteConfig.description,
 		url: siteConfig.url,
-		logo: `${siteConfig.url}/logo.png`,
+		logo: `${siteConfig.url}/kceva.png`,
 		contactPoint: {
 			'@type': 'ContactPoint',
 			contactType: 'customer service',
