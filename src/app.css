@@ -250,9 +250,16 @@ body {
   background-color: var(--apple-gray-50);
 }
 
-/* Optimize form elements */
+/* Apple-style form elements */
 .form-input {
-  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200;
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all duration-200;
+  background-color: #ffffff;
+  border-color: var(--apple-gray-300);
+}
+
+.form-input:focus {
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
 }
 
 /* Accessibility improvements */
