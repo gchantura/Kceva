@@ -156,10 +156,10 @@ frontend:
 
 metadata:
   created_by: "testing_agent"
-  version: "2.0"
-  test_sequence: 2
+  version: "2.1"
+  test_sequence: 3
   last_updated: "2025-01-01"
-  redesign_status: "completed"
+  redesign_status: "completed_and_tested"
   design_style: "apple_minimalistic"
 
 test_plan:
