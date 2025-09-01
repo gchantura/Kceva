@@ -58,88 +58,51 @@
         </div>
       </div>
 
-      <!-- Mobile menu button -->
+      <!-- Apple-style Mobile menu button -->
       <div class="md:hidden">
         <button
           type="button"
           on:click={toggleMobileMenu}
-          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300"
           aria-controls="mobile-menu"
           aria-expanded={isMobileMenuOpen}
           aria-label="Toggle main menu"
         >
           <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {#if isMobileMenuOpen}
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             {:else}
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             {/if}
           </svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile menu -->
+    <!-- Apple-style Mobile menu -->
     {#if isMobileMenuOpen}
       <div class="md:hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
           <!-- Mobile search -->
           <div class="mb-4">
-            <label for="mobile-search-input" class="sr-only"
-              >Search products</label
-            >
+            <label for="mobile-search-input" class="sr-only">Search products</label>
             <input
               id="mobile-search-input"
               type="text"
               bind:value={searchQuery}
               on:keydown={(e) => e.key === "Enter" && handleSearch()}
               placeholder="Search products..."
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full px-4 py-2 bg-gray-100 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300"
               autocomplete="off"
             />
           </div>
 
-          <a
-            href="/"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Home</a
-          >
-          <a
-            href="/category/electronics"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Electronics</a
-          >
-          <a
-            href="/category/fashion"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Fashion</a
-          >
-          <a
-            href="/category/home-garden"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Home & Garden</a
-          >
-          <a
-            href="/category/sports-outdoors"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Sports</a
-          >
+          <a href="/" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="/category/electronics" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Electronics</a>
+          <a href="/category/fashion" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Fashion</a>
+          <a href="/category/home-garden" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home & Garden</a>
+          <a href="/category/sports-outdoors" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Sports</a>
         </div>
       </div>
     {/if}
