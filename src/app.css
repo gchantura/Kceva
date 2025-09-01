@@ -27,21 +27,21 @@
   justify-content: center;
 }
 
-/* Optimize font loading with font-display: swap */
+/* Apple-style typography */
 @font-face {
-  font-family: 'Inter';
+  font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+  src: local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local('Inter SemiBold'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2') format('woff2');
+  src: local('SF Pro Display Semibold'), local('-apple-system'), local('BlinkMacSystemFont'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2') format('woff2');
 }
 
 /* Reduce layout shift */
