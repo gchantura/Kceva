@@ -41,50 +41,22 @@
 <Header />
 
 <main>
-        <!-- Hero Section with optimized LCP image -->
-        <section
-                class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white hero-section"
-        >
-                <div class="absolute inset-0">
-                        <OptimizedImage
-                                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg"
-                                alt="Modern eCommerce Shopping Experience"
-                                width="1920"
-                                height="1080"
-                                className="w-full h-full object-cover opacity-20"
-                                priority={true}
-                                sizes="100vw"
-                                aspectRatio="16/9"
-                        />
-                </div>
-                <div
-                        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 hero-content"
-                >
+        <!-- Apple-style Hero Section -->
+        <section class="hero-section bg-white">
+                <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
                         <div class="text-center">
-                                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                                <h1 class="text-5xl md:text-7xl font-light mb-6 text-gray-900 tracking-tight">
                                         Discover Premium Products
-                                        <span
-                                                class="block text-3xl md:text-5xl text-blue-300"
-                                                >Curated Just for You</span
-                                        >
                                 </h1>
-                                <p
-                                        class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
-                                >
-                                        Hand-picked products, exclusive deals,
-                                        and honest reviews. Your trusted source
-                                        for smart shopping decisions.
+                                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-600 font-light leading-relaxed">
+                                        Hand-picked products, exclusive deals, and honest reviews.<br>
+                                        Your trusted source for smart shopping decisions.
                                 </p>
-                                <div
-                                        class="flex flex-col sm:flex-row gap-4 justify-center"
-                                >
-                                        <a href="#featured" class="btn-primary">
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                        <a href="#featured" class="btn-primary text-lg px-8 py-4">
                                                 Shop Featured Products
                                         </a>
-                                        <a
-                                                href="#categories"
-                                                class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
-                                        >
+                                        <a href="#categories" class="btn-minimal text-lg px-8 py-4">
                                                 Browse Categories
                                         </a>
                                 </div>
