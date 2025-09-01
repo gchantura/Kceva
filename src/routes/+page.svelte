@@ -83,21 +83,15 @@
                 </div>
         </section>
 
-        <!-- Featured Products -->
-        <section id="featured" class="py-16 bg-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="text-center mb-12">
-                                <h2
-                                        class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-                                >
+        <!-- Apple-style Featured Products -->
+        <section id="featured" class="py-20 bg-white">
+                <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+                        <div class="text-center mb-16">
+                                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                                         Featured Products
                                 </h2>
-                                <p
-                                        class="text-lg text-gray-600 max-w-2xl mx-auto"
-                                >
-                                        Top-rated products with exclusive deals.
-                                        Limited time offers you don't want to
-                                        miss.
+                                <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+                                        Top-rated products with exclusive deals. Limited time offers you don't want to miss.
                                 </p>
                         </div>
                         <div class="product-grid">
@@ -105,8 +99,8 @@
                                         <ProductCard {product} />
                                 {/each}
                         </div>
-                        <div class="text-center mt-12">
-                                <a href="/products" class="btn-primary">
+                        <div class="text-center mt-16">
+                                <a href="/products" class="btn-primary text-lg px-8 py-4">
                                         View All Products
                                 </a>
                         </div>
