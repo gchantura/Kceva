@@ -159,30 +159,22 @@
                 </div>
         </section>
 
-        <!-- Newsletter Signup -->
-        <section class="py-16 bg-blue-50">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="max-w-2xl mx-auto text-center">
-                                <h2
-                                        class="text-3xl font-bold text-gray-900 mb-4"
-                                >
+        <!-- Apple-style Newsletter Signup -->
+        <section class="py-20 bg-white">
+                <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+                        <div class="text-center">
+                                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                                         Stay Updated
                                 </h2>
-                                <p class="text-lg text-gray-600 mb-8">
-                                        Get exclusive deals, product
-                                        recommendations, and early access to
-                                        sales delivered to your inbox.
+                                <p class="text-xl text-gray-600 mb-12 font-light">
+                                        Get exclusive deals, product recommendations, and early access to sales delivered to your inbox.
                                 </p>
                                 <form
-                                        class="flex flex-col sm:flex-row gap-4"
+                                        class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
                                         action="/newsletter"
                                         method="POST"
                                 >
-                                        <label
-                                                for="newsletter-email"
-                                                class="sr-only"
-                                                >Email address</label
-                                        >
+                                        <label for="newsletter-email" class="sr-only">Email address</label>
                                         <input
                                                 id="newsletter-email"
                                                 name="email"
@@ -192,16 +184,12 @@
                                                 required
                                                 autocomplete="email"
                                         />
-                                        <button
-                                                type="submit"
-                                                class="btn-primary"
-                                        >
+                                        <button type="submit" class="btn-primary">
                                                 Subscribe
                                         </button>
                                 </form>
-                                <p class="text-sm text-gray-500 mt-4">
-                                        No spam, unsubscribe anytime. We respect
-                                        your privacy.
+                                <p class="text-sm text-gray-500 mt-6">
+                                        No spam, unsubscribe anytime. We respect your privacy.
                                 </p>
                         </div>
                 </div>
