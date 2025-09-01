@@ -64,26 +64,18 @@
                 </div>
         </section>
 
-        <!-- Featured Categories -->
-        <section id="categories" class="py-16 bg-gray-50">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="text-center mb-12">
-                                <h2
-                                        class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-                                >
+        <!-- Apple-style Categories Section -->
+        <section id="categories" class="py-20 bg-gray-50">
+                <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+                        <div class="text-center mb-16">
+                                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                                         Shop by Category
                                 </h2>
-                                <p
-                                        class="text-lg text-gray-600 max-w-2xl mx-auto"
-                                >
-                                        Explore our carefully curated categories
-                                        featuring the best products in each
-                                        segment.
+                                <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+                                        Explore our carefully curated categories featuring the best products in each segment.
                                 </p>
                         </div>
-                        <div
-                                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-                        >
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {#each categories as category}
                                         <CategoryCard {category} />
                                 {/each}
