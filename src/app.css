@@ -127,24 +127,24 @@ body {
 
 /* Apple-style color system */
 .text-apple-blue {
-  color: var(--apple-blue);
+  color: #007aff;
 }
 
 .text-apple-green {
-  color: var(--apple-green);
+  color: #34c759;
 }
 
 .bg-apple-blue {
-  background-color: var(--apple-blue);
+  background-color: #007aff;
 }
 
 .bg-apple-green {
-  background-color: var(--apple-green);
+  background-color: #34c759;
 }
 
 /* Price text with Apple's subtle approach */
 .price-text {
-  color: var(--apple-gray-900);
+  color: #171717;
   font-weight: 600;
 }
 
