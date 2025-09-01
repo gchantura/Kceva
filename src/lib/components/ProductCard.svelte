@@ -78,7 +78,6 @@
         rel="noopener noreferrer sponsored"
         class="flex-1 bg-apple-blue text-white text-center py-3 px-4 rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2"
         aria-label="Buy {product.name} now for {formatPrice(product.price)}"
-        style="background-color: var(--apple-blue);"
       >
         Buy Now
       </a>
