@@ -2,10 +2,26 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+/* Apple-inspired design system */
+:root {
+  --apple-gray-50: #fafafa;
+  --apple-gray-100: #f5f5f5;
+  --apple-gray-200: #e5e5e5;
+  --apple-gray-300: #d4d4d4;
+  --apple-gray-400: #a3a3a3;
+  --apple-gray-500: #737373;
+  --apple-gray-600: #525252;
+  --apple-gray-700: #404040;
+  --apple-gray-800: #262626;
+  --apple-gray-900: #171717;
+  --apple-blue: #007aff;
+  --apple-green: #34c759;
+}
+
 /* Critical CSS for above-the-fold content */
 .hero-section {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-  min-height: 100vh;
+  background: #ffffff;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
