@@ -288,13 +288,17 @@ body {
 
 /* Apple-style form elements */
 .form-input {
-  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all duration-200;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 0.5rem;
   background-color: #ffffff;
-  border-color: var(--apple-gray-300);
+  transition: all 0.2s ease;
 }
 
 .form-input:focus {
-  border-color: var(--apple-blue);
+  outline: none;
+  border-color: #007aff;
   box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
 }
 
