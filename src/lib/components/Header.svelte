@@ -14,44 +14,28 @@
   }
 </script>
 
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-md bg-white/95">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
     <div class="flex justify-between items-center h-16">
-      <!-- Logo -->
+      <!-- Apple-style Logo -->
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center" aria-label="Kceva Home">
-          <div class="text-2xl font-bold text-blue-600">Kceva</div>
-          <div class="text-xs text-gray-900 ml-1 pr-5">Affiliate Store</div>
+          <div class="text-2xl font-medium text-gray-900 tracking-tight">Kceva</div>
+          <div class="text-sm text-gray-500 ml-2">Affiliate Store</div>
         </a>
       </div>
 
-      <!-- Desktop Navigation -->
+      <!-- Apple-style Desktop Navigation -->
       <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
-        <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors"
-          >Home</a
-        >
-        <a
-          href="/category/electronics"
-          class="text-gray-700 hover:text-blue-600 transition-colors"
-          >Electronics</a
-        >
-        <a
-          href="/category/fashion"
-          class="text-gray-700 hover:text-blue-600 transition-colors">Fashion</a
-        >
-        <a
-          href="/category/home-garden"
-          class="text-gray-700 hover:text-blue-600 transition-colors"
-          >Home & Garden</a
-        >
-        <a
-          href="/category/sports-outdoors"
-          class="text-gray-700 hover:text-blue-600 transition-colors">Sports</a
-        >
+        <a href="/" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Home</a>
+        <a href="/category/electronics" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Electronics</a>
+        <a href="/category/fashion" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Fashion</a>
+        <a href="/category/home-garden" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Home & Garden</a>
+        <a href="/category/sports-outdoors" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Sports</a>
       </nav>
 
-      <!-- Search Bar -->
-      <div class="hidden md:flex flex-1 max-w-lg mx-8">
+      <!-- Apple-style Search Bar -->
+      <div class="hidden md:flex flex-1 max-w-md mx-8">
         <div class="relative w-full">
           <label for="search-input" class="sr-only">Search products</label>
           <input
@@ -60,46 +44,17 @@
             bind:value={searchQuery}
             on:keydown={(e) => e.key === "Enter" && handleSearch()}
             placeholder="Search products..."
-            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full pl-10 pr-4 py-2 bg-gray-100 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300 focus:bg-white transition-all"
             autocomplete="off"
           />
           <div
             class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
             aria-hidden="true"
           >
-            <svg
-              class="h-5 w-5 text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
+            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
-          <button
-            on:click={handleSearch}
-            class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-blue-600"
-            aria-label="Search products"
-          >
-            <svg
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 7l5 5-5 5M6 12h12"
-              />
-            </svg>
-          </button>
         </div>
       </div>
 
