@@ -9,7 +9,7 @@
 </script>
 
 <article
-  class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group product-card hover-lift"
+  class="bg-white rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden group product-card hover-lift"
 >
   <div class="relative overflow-hidden">
     <OptimizedImage
@@ -17,40 +17,29 @@
       alt={product.name}
       width="400"
       height="300"
-      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+      className="w-full h-56 object-cover group-hover:scale-102 transition-transform duration-500"
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       aspectRatio="4/3"
     />
     {#if showDiscount && product.discount > 0}
-      <div
-        class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-md text-sm font-semibold"
-      >
+      <div class="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
         {formatDiscount(product.discount)}
       </div>
     {/if}
-    <div
-      class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-    ></div>
   </div>
 
-  <div class="p-4">
-    <h3 class="font-semibold text-gray-800 mb-2 line-clamp-2 text-sm">
+  <div class="p-6">
+    <h3 class="font-medium text-gray-900 mb-2 line-clamp-2 text-lg leading-snug">
       {product.name}
     </h3>
-    <p class="text-gray-600 text-xs mb-3 line-clamp-2">{product.description}</p>
+    <p class="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">{product.description}</p>
 
-    <!-- Rating -->
-    <div class="flex items-center mb-2">
-      <div
-        class="flex items-center"
-        role="img"
-        aria-label="Rating: {product.rating} out of 5 stars"
-      >
+    <!-- Apple-style Rating -->
+    <div class="flex items-center mb-4">
+      <div class="flex items-center" role="img" aria-label="Rating: {product.rating} out of 5 stars">
         {#each Array(5) as _, i}
           <svg
-            class="w-4 h-4 {i < Math.floor(product.rating)
-              ? 'text-yellow-400'
-              : 'text-gray-300'}"
+            class="w-4 h-4 {i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}"
             fill="currentColor"
             viewBox="0 0 20 20"
             aria-hidden="true"
@@ -61,28 +50,24 @@
           </svg>
         {/each}
       </div>
-      <span class="text-xs text-gray-500 ml-1">({product.reviewCount})</span>
+      <span class="text-sm text-gray-500 ml-2">({product.reviewCount})</span>
     </div>
 
-    <!-- Price with improved contrast -->
-    <div class="flex items-center justify-between mb-3">
+    <!-- Apple-style Price -->
+    <div class="flex items-center justify-between mb-6">
       <div class="flex items-center space-x-2">
-        <span class="text-lg font-bold price-text"
-          >{formatPrice(product.price)}</span
-        >
+        <span class="text-2xl font-semibold price-text">{formatPrice(product.price)}</span>
         {#if product.originalPrice > product.price}
-          <span class="text-sm text-gray-500 line-through"
-            >{formatPrice(product.originalPrice)}</span
-          >
+          <span class="text-lg text-gray-500 line-through">{formatPrice(product.originalPrice)}</span>
         {/if}
       </div>
     </div>
 
-    <!-- Action Buttons -->
-    <div class="flex space-x-2">
+    <!-- Apple-style Action Buttons -->
+    <div class="flex space-x-3">
       <a
         href="/products/{product.id}"
-        class="flex-1 bg-blue-600 text-white text-center py-2 px-3 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        class="flex-1 bg-gray-100 text-gray-900 text-center py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
         aria-label="View details for {product.name}"
       >
         View Details
@@ -91,10 +76,11 @@
         href={product.affiliateUrl}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        class="flex-1 bg-green-600 text-white text-center py-2 px-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+        class="flex-1 bg-apple-blue text-white text-center py-3 px-4 rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2"
         aria-label="Buy {product.name} now for {formatPrice(product.price)}"
+        style="background-color: var(--apple-blue);"
       >
-        View on Amazon
+        Buy Now
       </a>
     </div>
   </div>
