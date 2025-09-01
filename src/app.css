@@ -125,26 +125,26 @@ body {
   contain: layout style paint;
 }
 
-/* Enhanced color contrast for accessibility */
-.text-green-600 {
-  color: #059669; /* Improved contrast ratio */
+/* Apple-style color system */
+.text-apple-blue {
+  color: var(--apple-blue);
 }
 
-.text-green-700 {
-  color: #047857; /* Even better contrast for important text */
+.text-apple-green {
+  color: var(--apple-green);
 }
 
-.bg-green-600 {
-  background-color: #059669;
+.bg-apple-blue {
+  background-color: var(--apple-blue);
 }
 
-.bg-green-700 {
-  background-color: #047857;
+.bg-apple-green {
+  background-color: var(--apple-green);
 }
 
-/* Price text with better contrast */
+/* Price text with Apple's subtle approach */
 .price-text {
-  color: #047857; /* WCAG AA compliant green */
+  color: var(--apple-gray-900);
   font-weight: 600;
 }
 
