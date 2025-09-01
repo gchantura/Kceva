@@ -171,16 +171,20 @@ body {
   will-change: transform;
 }
 
-/* Reduce paint complexity for cards */
+/* Apple-style cards */
 .product-card {
   contain: layout style paint;
   transform: translateZ(0);
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--apple-gray-200);
 }
 
-/* Optimize hover states */
+/* Apple-style hover effects - subtle */
 .hover-lift:hover {
-  transform: translateY(-2px) translateZ(0);
-  transition: transform 0.2s ease-out;
+  transform: translateY(-1px) translateZ(0);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.12);
 }
 
 /* Critical above-the-fold styles */
