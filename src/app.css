@@ -177,7 +177,7 @@ body {
   transform: translateZ(0);
   background: #ffffff;
   border-radius: 12px;
-  border: 1px solid var(--apple-gray-200);
+  border: 1px solid #e5e5e5;
 }
 
 /* Apple-style hover effects - subtle */
@@ -185,6 +185,10 @@ body {
   transform: translateY(-1px) translateZ(0);
   transition: all 0.2s ease-out;
   box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.12);
+}
+
+.group-hover\:scale-102:hover {
+  transform: scale(1.02);
 }
 
 /* Critical above-the-fold styles */
